@@ -44,15 +44,14 @@ public class FileHelper extends Activity {
     }
 
     private int getDays(int boxNumber) {
-        return 0;
-//        switch (boxNumber) {
-//            case 1: return 0;
-//            case 2: return 1;
-//            case 3: return 2;
-//            case 4: return 4;
-//            case 5: return 8;
-//            default: return 0;
-//        }
+        switch (boxNumber) {
+            case 1: return 0;
+            case 2: return 1;
+            case 3: return 2;
+            case 4: return 4;
+            case 5: return 8;
+            default: return 0;
+        }
     }
 
     void addNewWordToBoxFile(String newWord, String newMeaning, int boxNumber, boolean backward) {
