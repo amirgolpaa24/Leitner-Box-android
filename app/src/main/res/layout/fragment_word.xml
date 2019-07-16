@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wordsFragment_frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CFBAFF"
+    tools:context=".WordFragment"
+    android:padding="3dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/word_textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@drawable/word_textview_background"
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="center"
+            android:text="@string/hello_blank_fragment"
+            android:textAlignment="center"
+            android:textColor="#CFBAFF"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/cardNumber_textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/word_textview_background"
+            android:fontFamily="@font/raleway_light"
+            android:gravity="center"
+            android:text="@string/hello_blank_fragment"
+            android:textAlignment="center"
+            android:textColor="#CFBAFF"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/delete_button_background"
+            android:padding="2dp"
+            android:layout_marginTop="1dp"
+            android:drawableStart="@drawable/delete"
+            android:text="@string/delete_word"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/meaning_textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:background="#CFBAFF"
+            android:fontFamily="@font/raleway_light"
+            android:gravity="center"
+            android:text="@string/hello_blank_fragment"
+            android:textAlignment="center"
+            android:textColor="#1E091F"
+            android:textSize="20sp" />
+
+
+        <LinearLayout
+            android:id="@+id/knowingButtons_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/know_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/know_button_background"
+                android:layout_margin="3dp"
+                android:gravity="center"
+                android:fontFamily="@font/raleway_heavy"
+                android:text="@string/knowTheWord"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:drawableEnd="@drawable/thumb_up_outline"
+                android:textDirection="ltr"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintLeft_toRightOf="@+id/notKnow_button"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/notKnow_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/notknow_button_background"
+                android:layout_margin="3dp"
+                android:gravity="center"
+                android:fontFamily="@font/raleway_heavy"
+                android:text="@string/notKnowTheWord"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:drawableEnd="@drawable/thumb_down_outline"
+                android:textDirection="ltr"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/know_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/boxLinearLayout_linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#CFBAFF"
+    tools:context=".BoxActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/settingsTitle_textView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:fontFamily="@font/raleway_bold"
+        android:background="#1E091F"
+        android:textColor="#CFBAFF"
+        android:gravity="start|center_vertical"
+        android:layoutDirection="ltr"
+        android:text="@string/settingsTitle"
+        android:textAlignment="center"
+        android:textDirection="ltr"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/settingsactivity_back_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="@+id/settingsTitle_textView"
+        app:layout_constraintBottom_toBottomOf="@+id/settingsTitle_textView"
+        app:layout_constraintStart_toStartOf="@+id/settingsTitle_textView"
+        android:background="#1E091F"
+        android:layout_marginLeft="10dp"
+        android:drawableStart="@drawable/arrow_left" />
+
+
+    <TextView
+        android:id="@+id/clearingExplanation_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/settingsTitle_textView"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="25dp"
+        android:textSize="16sp"
+        android:textColor="#1E091F"
+        android:text="@string/settingsExplanationForClearingAllBoxes"/>
+
+    <Button
+        android:id="@+id/clearAllBoxes_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/clearingExplanation_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="166dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:text="@string/clear_all_files" />
+
+    <TextView
+        android:id="@+id/clearingExplanation1_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/clearAllBoxes_button"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="25dp"
+        android:textSize="16sp"
+        android:textColor="#1E091F"
+        android:text="@string/settingsExplanationForClearingLearnedWordsBox"/>
+
+    <Button
+        android:id="@+id/clearLearnedWordsBox_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/clearingExplanation1_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="15dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:text="@string/clear_learned_words_file" />
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

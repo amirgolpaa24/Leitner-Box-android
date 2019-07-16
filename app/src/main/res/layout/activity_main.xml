@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#CFBAFF">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.8"
+            android:background="#1E091F"
+            android:gravity="center"
+            android:contentInsetStart="0dp"
+            android:contentInsetEnd="0dp" >
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/leitnerBoxTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/leitner_box"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <Button
+                    android:id="@+id/addWords_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintHeight_max="30dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/library_plus"
+                    android:padding="1dp"
+                    app:layout_constraintEnd_toStartOf="@+id/settings_button"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <Button
+                    android:id="@+id/settings_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintHeight_max="30dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/settings"
+                    android:padding="1dp"
+                    app:layout_constraintEnd_toStartOf="@+id/help_button"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <Button
+                    android:id="@+id/help_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintHeight_max="30dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/help_circle_outline"
+                    android:padding="1dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </Toolbar>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/firstBox_button"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/box_button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/firstBox_button"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:fontFamily="@font/raleway_semibold"
+                android:textColor="#CFBAFF"
+                android:drawableStart="@drawable/package_variant"
+                android:paddingStart="15dp"
+                android:gravity="start|center_vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/firstBoxReadiness_textView"/>
+            <TextView
+                android:id="@+id/firstBoxReadiness_textView"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:text="@string/readinessPercentageOfBox"
+                android:textSize="15sp"
+                android:textColor="#CFBAFF"
+                android:fontFamily="@font/open_sans_light"
+                android:background="@drawable/readiness_textview_background"
+                android:gravity="center" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/secondBox_button"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/box_button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/secondBox_button"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:fontFamily="@font/raleway_semibold"
+                android:textColor="#CFBAFF"
+                android:drawableStart="@drawable/package_variant"
+                android:paddingStart="15dp"
+                android:gravity="start|center_vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/secondBoxReadiness_textView"/>
+            <TextView
+                android:id="@+id/secondBoxReadiness_textView"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:text="@string/readinessPercentageOfBox"
+                android:textSize="15sp"
+                android:textColor="#CFBAFF"
+                android:fontFamily="@font/open_sans_light"
+                android:background="@drawable/readiness_textview_background"
+                android:gravity="center" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/thirdBox_button"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/box_button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/thirdBox_button"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:fontFamily="@font/raleway_semibold"
+                android:textColor="#CFBAFF"
+                android:drawableStart="@drawable/package_variant"
+                android:paddingStart="15dp"
+                android:gravity="start|center_vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/thirdBoxReadiness_textView"/>
+            <TextView
+                android:id="@+id/thirdBoxReadiness_textView"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:text="@string/readinessPercentageOfBox"
+                android:textSize="15sp"
+                android:textColor="#CFBAFF"
+                android:fontFamily="@font/open_sans_light"
+                android:background="@drawable/readiness_textview_background"
+                android:gravity="center" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/fourthBox_button"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/box_button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/fourthBox_button"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:fontFamily="@font/raleway_semibold"
+                android:textColor="#CFBAFF"
+                android:drawableStart="@drawable/package_variant"
+                android:paddingStart="15dp"
+                android:gravity="start|center_vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/fourthBoxReadiness_textView"/>
+            <TextView
+                android:id="@+id/fourthBoxReadiness_textView"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:text="@string/readinessPercentageOfBox"
+                android:textSize="15sp"
+                android:textColor="#CFBAFF"
+                android:fontFamily="@font/open_sans_light"
+                android:background="@drawable/readiness_textview_background"
+                android:gravity="center" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/fifthBox_button"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/box_button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/fifthBox_button"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:fontFamily="@font/raleway_semibold"
+                android:textColor="#CFBAFF"
+                android:drawableStart="@drawable/package_variant"
+                android:paddingStart="15dp"
+                android:gravity="start|center_vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/fifthBoxReadiness_textView"/>
+            <TextView
+                android:id="@+id/fifthBoxReadiness_textView"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:text="@string/readinessPercentageOfBox"
+                android:textSize="15sp"
+                android:textColor="#CFBAFF"
+                android:fontFamily="@font/open_sans_light"
+                android:background="@drawable/readiness_textview_background"
+                android:gravity="center" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/allLearnedWords_button"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/learnedbox_button_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/learnedWords_button"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:fontFamily="@font/raleway_semibold"
+                android:textColor="#CFBAFF"
+                android:drawableStart="@drawable/package_variant"
+                android:paddingStart="15dp"
+                android:gravity="start|center_vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/learnedBoxReadiness_textView"/>
+            <TextView
+                android:id="@+id/learnedBoxReadiness_textView"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="6dp"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:text="@string/numAllLearned"
+                android:textSize="15sp"
+                android:textColor="#CFBAFF"
+                android:fontFamily="@font/open_sans_light"
+                android:background="@drawable/learnednum_textview_background"
+                android:gravity="center" />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
