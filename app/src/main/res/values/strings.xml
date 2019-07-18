@@ -2,7 +2,7 @@
     <string name="app_name">Leitner Box</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Tap here to see the meaning</string>
     <string name="firstBox_button">First Box</string>
     <string name="secondBox_button">Second Box</string>
     <string name="thirdBox_button">Third Box</string>
@@ -43,4 +43,5 @@
         \n\nOn the bottom you can click on either \"I knew\" (if you guessed the meaning right) or \"I didn\'\t know\" buttons (if you couldn\'t guess the meaning right);
         \n\nOr you can just delete the word by clicking on \"delete\" button.</string>
     <string name="clear_learned_words_file">Clear Learned Words Box</string>
+    <string name="daysOfBox">16 days : 24 hours</string>
 </resources>

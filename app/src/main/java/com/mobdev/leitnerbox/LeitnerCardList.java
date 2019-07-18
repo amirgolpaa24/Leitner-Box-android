@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class LeitnerCardList implements Serializable {
 
@@ -141,13 +142,11 @@ public class LeitnerCardList implements Serializable {
             j = cardString.lastIndexOf(":\n");
 
             releaseTime = Long.parseLong(cardString.substring(1, i));
-            if(!LimitReleasedTime)
-                releaseTime = 0;
 
             word = cardString.substring(i + 1, j);
             meaning = cardString.substring(j + 2);
 
-            if(releaseTime <= ZonedDateTime.now().toInstant().toEpochMilli())
+            if (!LimitReleasedTime || releaseTime <= ZonedDateTime.now().toInstant().toEpochMilli())
                 this.cards.add(new LeitnerCard(word, meaning, releaseTime));
 
             count++;
@@ -231,7 +230,33 @@ public class LeitnerCardList implements Serializable {
         return this.count;
     }
 
+    public long getMinMillisecondsTillReady() {
+        long minMillisecondsTillReady = 0;
+        long milliseconds;
 
+        for (int i = 0; i < cards.size(); i++) {
+            LeitnerCard card = cards.get(i);
+
+            milliseconds = card.getReleaseTime() - ZonedDateTime.now().toInstant().toEpochMilli();
+            if(milliseconds <= 0)
+                continue;
+
+            if(i == 0 || milliseconds < minMillisecondsTillReady)
+                minMillisecondsTillReady = milliseconds;
+        }
+
+        Log.i("------------------------------", "box = " + boxNumber + "   milli = " + minMillisecondsTillReady);
+        return minMillisecondsTillReady;
+    }
+
+
+    public static int getDaysFromMilliseconds(long milliseconds) {
+        return (int) (milliseconds / (24 * 3600 * 1000));
+    }
+
+    public static int getHoursFromMilliseconds(long milliseconds) {
+        return (int) (milliseconds / (3600 * 1000) % 24);
+    }
 
 }
 

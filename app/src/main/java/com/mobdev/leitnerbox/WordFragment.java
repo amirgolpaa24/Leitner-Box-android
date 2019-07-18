@@ -5,6 +5,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Size;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,7 +66,6 @@ public class WordFragment extends Fragment {
         frameLayout = view.findViewById(R.id.wordsFragment_frameLayout);
 
         wordTextView.setText("There are no words ready to show.");
-        meaningTextView.setText("");
         if (getArguments() != null) {
             position = getArguments().getInt("POSITION");
             mark = wordsMark.get(position);
@@ -153,6 +154,7 @@ public class WordFragment extends Fragment {
                 }
 
                 meaningTextView.setText(meaning);
+                meaningTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
             }
         });
         deleteButton = view.findViewById(R.id.delete_button);

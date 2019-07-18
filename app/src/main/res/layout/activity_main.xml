@@ -83,17 +83,18 @@
         </Toolbar>
 
 
-        <RelativeLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/box_button_background"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="3dp" >
+
             <Button
                 android:id="@+id/firstBox_button"
-                android:layout_marginStart="6dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="3dp"
-                android:background="@drawable/box_button_background"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/firstBox_button"
@@ -101,40 +102,68 @@
                 android:textSize="20sp"
                 android:fontFamily="@font/raleway_semibold"
                 android:textColor="#CFBAFF"
+                android:background="@color/transparent"
                 android:drawableStart="@drawable/package_variant"
                 android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 android:gravity="start|center_vertical"
                 android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/firstBoxReadiness_textView"/>
-            <TextView
-                android:id="@+id/firstBoxReadiness_textView"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="6dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="3dp"
-                android:layout_width="150dp"
+                android:layout_toStartOf="@+id/firstBoxInfo_frame">
+            </Button>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/firstBoxInfo_frame"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:text="@string/readinessPercentageOfBox"
-                android:textSize="15sp"
-                android:textColor="#CFBAFF"
-                android:fontFamily="@font/open_sans_light"
-                android:background="@drawable/readiness_textview_background"
-                android:gravity="center" />
-        </RelativeLayout>
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                app:layout_constraintEnd_toEndOf="parent" >
+
+                <TextView
+                    android:id="@+id/firstBoxReadiness_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="@string/readinessPercentageOfBox"
+                    android:textSize="12sp"
+                    android:textColor="#CFBAFF"
+                    android:fontFamily="@font/open_sans_light"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/firstBoxDays_textView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/firstBoxDays_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="@string/daysOfBox"
+                    android:textSize="12sp"
+                    android:textColor="#CFBAFF"
+                    android:fontFamily="@font/open_sans_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/firstBoxReadiness_textView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="center" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
 
 
-        <RelativeLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/box_button_background"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp" >
+
             <Button
                 android:id="@+id/secondBox_button"
-                android:layout_marginStart="6dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:background="@drawable/box_button_background"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/secondBox_button"
@@ -142,40 +171,68 @@
                 android:textSize="20sp"
                 android:fontFamily="@font/raleway_semibold"
                 android:textColor="#CFBAFF"
+                android:background="@color/transparent"
                 android:drawableStart="@drawable/package_variant"
                 android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 android:gravity="start|center_vertical"
                 android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/secondBoxReadiness_textView"/>
-            <TextView
-                android:id="@+id/secondBoxReadiness_textView"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="6dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:layout_width="150dp"
+                android:layout_toStartOf="@+id/secondBoxInfo_frame">
+            </Button>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/secondBoxInfo_frame"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:text="@string/readinessPercentageOfBox"
-                android:textSize="15sp"
-                android:textColor="#CFBAFF"
-                android:fontFamily="@font/open_sans_light"
-                android:background="@drawable/readiness_textview_background"
-                android:gravity="center" />
-        </RelativeLayout>
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                app:layout_constraintEnd_toEndOf="parent" >
+
+                <TextView
+                    android:id="@+id/secondBoxReadiness_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="@string/readinessPercentageOfBox"
+                    android:textSize="12sp"
+                    android:textColor="#CFBAFF"
+                    android:fontFamily="@font/open_sans_light"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/secondBoxDays_textView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/secondBoxDays_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="@string/daysOfBox"
+                    android:textSize="12sp"
+                    android:textColor="#CFBAFF"
+                    android:fontFamily="@font/open_sans_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/secondBoxReadiness_textView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="center" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
 
 
-        <RelativeLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/box_button_background"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp" >
+
             <Button
                 android:id="@+id/thirdBox_button"
-                android:layout_marginStart="6dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:background="@drawable/box_button_background"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/thirdBox_button"
@@ -183,40 +240,68 @@
                 android:textSize="20sp"
                 android:fontFamily="@font/raleway_semibold"
                 android:textColor="#CFBAFF"
+                android:background="@color/transparent"
                 android:drawableStart="@drawable/package_variant"
                 android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 android:gravity="start|center_vertical"
                 android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/thirdBoxReadiness_textView"/>
-            <TextView
-                android:id="@+id/thirdBoxReadiness_textView"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="6dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:layout_width="150dp"
+                android:layout_toStartOf="@+id/thirdBoxInfo_frame">
+            </Button>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/thirdBoxInfo_frame"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:text="@string/readinessPercentageOfBox"
-                android:textSize="15sp"
-                android:textColor="#CFBAFF"
-                android:fontFamily="@font/open_sans_light"
-                android:background="@drawable/readiness_textview_background"
-                android:gravity="center" />
-        </RelativeLayout>
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                app:layout_constraintEnd_toEndOf="parent" >
+
+                <TextView
+                    android:id="@+id/thirdBoxReadiness_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="@string/readinessPercentageOfBox"
+                    android:textSize="12sp"
+                    android:textColor="#CFBAFF"
+                    android:fontFamily="@font/open_sans_light"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/thirdBoxDays_textView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/thirdBoxDays_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="@string/daysOfBox"
+                    android:textSize="12sp"
+                    android:textColor="#CFBAFF"
+                    android:fontFamily="@font/open_sans_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/thirdBoxReadiness_textView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="center" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
 
 
-        <RelativeLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/box_button_background"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp" >
+
             <Button
                 android:id="@+id/fourthBox_button"
-                android:layout_marginStart="6dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:background="@drawable/box_button_background"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/fourthBox_button"
@@ -224,40 +309,68 @@
                 android:textSize="20sp"
                 android:fontFamily="@font/raleway_semibold"
                 android:textColor="#CFBAFF"
+                android:background="@color/transparent"
                 android:drawableStart="@drawable/package_variant"
                 android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 android:gravity="start|center_vertical"
                 android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/fourthBoxReadiness_textView"/>
-            <TextView
-                android:id="@+id/fourthBoxReadiness_textView"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="6dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:layout_width="150dp"
+                android:layout_toStartOf="@+id/fourthBoxInfo_frame">
+            </Button>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/fourthBoxInfo_frame"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:text="@string/readinessPercentageOfBox"
-                android:textSize="15sp"
-                android:textColor="#CFBAFF"
-                android:fontFamily="@font/open_sans_light"
-                android:background="@drawable/readiness_textview_background"
-                android:gravity="center" />
-        </RelativeLayout>
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                app:layout_constraintEnd_toEndOf="parent" >
+
+                <TextView
+                    android:id="@+id/fourthBoxReadiness_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="@string/readinessPercentageOfBox"
+                    android:textSize="12sp"
+                    android:textColor="#CFBAFF"
+                    android:fontFamily="@font/open_sans_light"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/fourthBoxDays_textView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/fourthBoxDays_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="@string/daysOfBox"
+                    android:textSize="12sp"
+                    android:textColor="#CFBAFF"
+                    android:fontFamily="@font/open_sans_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fourthBoxReadiness_textView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="center" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
 
 
-        <RelativeLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/box_button_background"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp" >
+
             <Button
                 android:id="@+id/fifthBox_button"
-                android:layout_marginStart="6dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:background="@drawable/box_button_background"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/fifthBox_button"
@@ -265,40 +378,69 @@
                 android:textSize="20sp"
                 android:fontFamily="@font/raleway_semibold"
                 android:textColor="#CFBAFF"
+                android:background="@color/transparent"
                 android:drawableStart="@drawable/package_variant"
                 android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 android:gravity="start|center_vertical"
                 android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/fifthBoxReadiness_textView"/>
-            <TextView
-                android:id="@+id/fifthBoxReadiness_textView"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="6dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:layout_width="150dp"
+                android:layout_toStartOf="@+id/fifthBoxInfo_frame">
+            </Button>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/fifthBoxInfo_frame"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:text="@string/readinessPercentageOfBox"
-                android:textSize="15sp"
-                android:textColor="#CFBAFF"
-                android:fontFamily="@font/open_sans_light"
-                android:background="@drawable/readiness_textview_background"
-                android:gravity="center" />
-        </RelativeLayout>
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                app:layout_constraintEnd_toEndOf="parent" >
+
+                <TextView
+                    android:id="@+id/fifthBoxReadiness_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="@string/readinessPercentageOfBox"
+                    android:textSize="12sp"
+                    android:textColor="#CFBAFF"
+                    android:fontFamily="@font/open_sans_light"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/fifthBoxDays_textView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/fifthBoxDays_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="@string/daysOfBox"
+                    android:textSize="12sp"
+                    android:textColor="#CFBAFF"
+                    android:fontFamily="@font/open_sans_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fifthBoxReadiness_textView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="center" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
 
 
-        <RelativeLayout
+
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/learnedbox_button_background"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="6dp" >
+
             <Button
                 android:id="@+id/allLearnedWords_button"
-                android:layout_marginStart="6dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="6dp"
-                android:background="@drawable/learnedbox_button_background"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/learnedWords_button"
@@ -306,29 +448,41 @@
                 android:textSize="20sp"
                 android:fontFamily="@font/raleway_semibold"
                 android:textColor="#CFBAFF"
+                android:background="@color/transparent"
                 android:drawableStart="@drawable/package_variant"
                 android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 android:gravity="start|center_vertical"
                 android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/learnedBoxReadiness_textView"/>
-            <TextView
-                android:id="@+id/learnedBoxReadiness_textView"
-                android:layout_marginStart="0dp"
-                android:layout_marginEnd="6dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="6dp"
-                android:layout_width="150dp"
+                android:layout_toStartOf="@+id/learnedBoxInfo_frame">
+            </Button>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/learnedBoxInfo_frame"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:text="@string/numAllLearned"
-                android:textSize="15sp"
-                android:textColor="#CFBAFF"
-                android:fontFamily="@font/open_sans_light"
-                android:background="@drawable/learnednum_textview_background"
-                android:gravity="center" />
-        </RelativeLayout>
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                app:layout_constraintEnd_toEndOf="parent" >
 
+                <TextView
+                    android:id="@+id/learnedBoxReadiness_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="@string/numAllLearned"
+                    android:textSize="15sp"
+                    android:textColor="#CFBAFF"
+                    android:fontFamily="@font/open_sans_light"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="center" />
 
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
 
 
     </LinearLayout>
