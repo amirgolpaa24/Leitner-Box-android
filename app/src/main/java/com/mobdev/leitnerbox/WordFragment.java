@@ -188,7 +188,7 @@ public class WordFragment extends Fragment {
         adapter.setWordsMarkAtPosition(position, WordFragmentCollectionAdapter.Mark.DELETED);
         mark = WordFragmentCollectionAdapter.Mark.DELETED;
 
-        cardNumberTextView.setText("word number " + ++position + " / " + count + " HAS BEEN DELETED!");
+        cardNumberTextView.setText("word number " + position++ + " / " + count + " HAS BEEN DELETED!");
         cardNumberTextView.setTextColor(Color.parseColor("#CF0808"));
         cardNumberTextView.setBackground(getResources().getDrawable(R.drawable.deleted_card_background, null));
         wordTextView.setText("");
